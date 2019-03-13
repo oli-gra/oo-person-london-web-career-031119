@@ -10,18 +10,6 @@ class Person
     @bank_account = 25
   end
 
-  def happiness=(i)
-    @happiness = i
-    @happiness = 10 if i > 10 
-    @happiness = 0 if i < 0
-  end
-
-  def hygiene=(i)
-    @hygiene = i
-    @hygiene = 10 if i > 10
-    @hygiene = 0 if i < 0
-  end
-
   def happy?
     @happiness > 7 ? true : false
   end
@@ -46,13 +34,13 @@ class Person
     "♪ another one bites the dust ♫"
   end
 
-  def call_friend(friend)
+  def call_friend (friend)
     self.happiness = @happiness + 3
     friend.happiness = friend.happiness + 3
     "Hi #{friend.name}! It's #{@name}. How are you?"
   end
 
-  def start_conversation(person, topic)
+  def start_conversation (person,topic)
     if topic == "politics"
       self.happiness = @happiness - 2
       person.happiness = person.happiness - 2
@@ -64,6 +52,20 @@ class Person
     else
       "blah blah blah blah blah"
     end
+  end
+  
+  private
+  
+  def happiness=(i)
+    @happiness = i
+    @happiness = 10 if i > 10 
+    @happiness = 0 if i < 0
+  end
+
+  def hygiene=(i)
+    @hygiene = i
+    @hygiene = 10 if i > 10
+    @hygiene = 0 if i < 0
   end
  
 end
