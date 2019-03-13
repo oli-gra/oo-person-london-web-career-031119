@@ -11,23 +11,15 @@ class Person
   end
 
   def happiness=(i)
-    if i > 10 
-      @happiness = 10
-    elsif i < 0
-      @happiness = 0
-    else
-      @happiness = i
-    end
+    @happiness = i
+    @happiness = 10 if i > 10 
+    @happiness = 0 if i < 0
   end
 
   def hygiene=(i)
-    if i > 10
-      @hygiene = 10
-    elsif i < 0
-      @hygiene = 0
-    else
-      @hygiene = i
-    end
+    @hygiene = i
+    @hygiene = 10 if i > 10
+    @hygiene = 0 if i < 0
   end
 
   def happy?
