@@ -10,32 +10,28 @@ class Person
      @bank_account = 25
    end
 
-    def happiness=(num)
-     if num > 10
+    def happiness=(i)
+     if i > 10
        @happiness = 10
-     elsif num < 0
+     elsif i < 0
        @happiness = 0
      else
-       @happiness = num
+       @happiness = i
      end
    end
 
-    def hygiene=(num)
-     if num > 10
+    def hygiene=(i)
+     if i > 10
        @hygiene = 10
-     elsif num < 0
+     elsif i < 0
        @hygiene = 0
      else
-       @hygiene = num
+       @hygiene = i
      end
    end
 
     def happy?
-     if @happiness > 7
-       true
-     else
-       false
-     end
+     @happiness > 7 ? true : false
    end
 
     def clean?
